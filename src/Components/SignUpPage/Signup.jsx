@@ -1,48 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { saveUserInfo } from "../../toolkit/slice";
+import React from "react";
 import Form from "react-bootstrap/Form";
 import "../SignUpPage/Signup.css";
 import TextField from "@mui/material/TextField";
-import { Link, useNavigate } from "react-router-dom";
-import { useSnackbar } from "notistack";
+import { Link } from "react-router-dom";
 
 const Signup = () => {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const { enqueueSnackbar, closeSnackbar } = useSnackbar();
-
-  const [userData, setUserData] = useState({
-    Name: "",
-    Email: "",
-    Password: "",
-  });
-
-  const ChangeValue = (e) => {
-    const { name, value } = e.target;
-    setUserData((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!userData.Name || !userData.Email || !userData.Password) {
-      const snackbar = enqueueSnackbar("Enter Valid Input.", {
-        variant: "error",
-      });
-      setTimeout(() => closeSnackbar(snackbar), 2000);
-      return;
-    }
-    dispatch(saveUserInfo(userData));
-    setUserData({
-      Name: "",
-      Email: "",
-      Password: "",
-    });
-    navigate("/login");
-  };
 
   return (
     <section className="container signup-page">
@@ -54,7 +16,7 @@ const Signup = () => {
 
       <section className="form-part">
         <div className="mt-5">
-          <Form onSubmit={handleSubmit}>
+          <Form>
             <Form.Group className="mb-3">
               <TextField
                 className="input-field bg-white w-100"
@@ -62,8 +24,6 @@ const Signup = () => {
                 variant="outlined"
                 type="text"
                 name="Name"
-                value={userData.Name}
-                onChange={ChangeValue}
               />
             </Form.Group>
             <Form.Group className="mb-3">
@@ -73,8 +33,6 @@ const Signup = () => {
                 variant="outlined"
                 type="email"
                 name="Email"
-                value={userData.Email}
-                onChange={ChangeValue}
               />
             </Form.Group>
             <Form.Group className="mb-3">
@@ -84,8 +42,6 @@ const Signup = () => {
                 variant="outlined"
                 type="password"
                 name="Password"
-                value={userData.Password}
-                onChange={ChangeValue}
               />
             </Form.Group>
           </Form>
@@ -110,7 +66,6 @@ const Signup = () => {
 
       <button
         className="w-100 sign-up-btn p-2 rounded-pill border-0 mt-4"
-        onClick={handleSubmit}
       >
         SIGN UP
       </button>

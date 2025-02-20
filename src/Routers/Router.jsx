@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import Review from "../Components/ReviewPart/Review";
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ProductDetails from "../Components/ProductDetail/ProductDetails";
 import Setting from "../Components/ProfilePage/Setting";
 import OrderDetail from "../Components/ProfilePage/OrderDetail";
@@ -17,7 +16,6 @@ import CategoryList from "../Components/CategoryPage/CategoryList";
 import Forgotpassword from "../Components/ForgotPage/Forgotpassword";
 import Signup from "../Components/SignUpPage/Signup";
 import Login from "../Components/LoginPage/Login";
-import Protected from "../Components/ProtectedRoute/Protected";
 import ShippingAddress from "../Components/CartPage/ShippingAddress";
 import Success from "../Components/CartPage/Success";
 import Checkout from "../Components/CartPage/Checkout";
@@ -25,17 +23,6 @@ import Adress from "../Components/ProfilePage/Adress";
 import NewPassword from "../Components/NewPassword/NewPassword";
 
 const Router = () => {
-  const [selectedAddress, setSelectedAddress] = useState(null);
-  const [totalAmount, setTotalAmount] = useState(0);
-
-  const Totalamount = (amount) => {
-    setTotalAmount(amount);
-  };
-
-  const Selectedadress = (address) => {
-    setSelectedAddress(address);
-  };
-
   return (
     <div>
       <BrowserRouter>
@@ -52,24 +39,20 @@ const Router = () => {
             element={<CategoryPage />}
           ></Route>
           <Route
-            path="/subcategory/:parentId"
+            path="/subcategory"
             element={<CategoryList />}
           ></Route>
           <Route
-            path="/catalog/:productId"
+            path="/catalog"
             element={<CatalogPage />}
           ></Route>
           <Route
-            path="/catalog2/:productId"
+            path="/catalog2"
             element={<CatalogPage2 />}
           ></Route>
           <Route
-            path="/productdetails/:id"
+            path="/productdetails"
             element={<ProductDetails />}
-          ></Route>
-          <Route
-            path="/review/:id"
-            element={<Review />}
           ></Route>
           <Route
             path="/favourite"
@@ -82,14 +65,14 @@ const Router = () => {
           <Route
             path="/cart"
             element={
-              <CartPage setTotalAmount={Totalamount} />}
+              <CartPage />}
           ></Route>
           <Route
             path="/profile"
             element={<MyProfile />}
           ></Route>
           <Route
-            path="/adress/:id"
+            path="/adress"
             element={<Adress />}
           ></Route>
           <Route
@@ -108,22 +91,14 @@ const Router = () => {
           <Route
             path="/checkout"
             element={
-              <Protected
-                element={
-                  <Checkout
-                    selectedAddress={selectedAddress}
-                    totalAmount={totalAmount}
-                  />
-                }
-              />
+              <Checkout />
             }
           ></Route>
 
           <Route
             path="/shippingaddress"
             element={
-              <ShippingAddress onSelectAddress={Selectedadress}
-              />
+              <ShippingAddress />
             }
           ></Route>
           <Route

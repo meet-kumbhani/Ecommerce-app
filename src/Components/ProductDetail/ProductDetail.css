@@ -3,8 +3,10 @@
 }
 
 .addtocart-btn {
-  background-color: rgba(255, 127, 0, 1);
-  color: white;
+  background-color: var(--primaryColor);
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 30px;
   box-shadow: 0px 4px 8px 0px #d3262640;
 }
 
