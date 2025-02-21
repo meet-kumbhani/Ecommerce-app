@@ -1,6 +1,6 @@
 @font-face {
   font-family: Metroplis;
-  src: url(../../../public/fonts/metropolis/Metropolis-Regular.otf);
+  src: url(/fonts/metropolis/Metropolis-Regular.otf);
 }
 
 :root {
@@ -13,7 +13,7 @@ body {
 }
 
 .main-page .image-content-part {
-  background-image: url(../../../public/images/Banner.png);
+  background-image: url(/images/Banner.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
