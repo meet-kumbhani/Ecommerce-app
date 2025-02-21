@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import SearchIcon from "@mui/icons-material/Search";
 import "../CategoryPage/CategoryPage.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Footer from "../Footerpart/Footer";
-import axios from "axios";
-import { mainURL } from "../../config/url";
 
 const CategoryList = () => {
 

@@ -3,18 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Provider } from 'react-redux';
-import store from "./toolkit/store"
 import { SnackbarProvider } from 'notistack';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-  <Provider store={store}>
-    <SnackbarProvider maxSnack={2}>
-      <App />
-    </SnackbarProvider>
-  </Provider>
+  <SnackbarProvider maxSnack={2}>
+    <App />
+  </SnackbarProvider>
 
   // </React.StrictMode>
 );
