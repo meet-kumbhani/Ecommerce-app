@@ -6,19 +6,15 @@ import "../CartPage/CartPage.css";
 import Form from "react-bootstrap/Form";
 import Footer from "../Footerpart/Footer";
 import { Link } from "react-router-dom";
+import Header from "../Header/Header";
 
 const CartPage = () => {
 
   return (
     <>
-      <section className="container-fluid cart-page">
-        <section className="top-part d-flex justify-content-between align-items-center">
-          <h1 className="fw-bold mt-3 mb-4">My Bag</h1>
-          <div className="">
-            <SearchIcon className="search-icon" />
-          </div>
-        </section>
-        <section className="cartprouct-part">
+      <section className="cart-page">
+        <Header name="My Bag" />
+        <section className="content-part cartprouct-part">
 
           <div className="product">
             <div className="row mb-4">

@@ -63,20 +63,18 @@ const MainPage = () => {
         <div className="d-flex justify-content-between align-items-center container-fluid">
           <p className="page-title">Sale</p>
           <div className="new-rightpart">
-            <Link className="sale-viewall m-0 p-0">View All</Link>
+            <Link to={"/productdetails"} className="sale-viewall m-0 p-0">View All</Link>
           </div>
         </div>
 
 
         <section className="pt-3 product-part d-flex pe-2 ps-2">
           <div>
-            <div className="pb-4 mx-2">
-              <div>
+            <Link to={"/productdetails"} className="pb-4 mx-2 nav-link">
+              <div className="product-image">
                 <img
                   src="https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"
-                  className="product-image2"
-                  height={"160px"}
-                  width={"130px"}
+                  className=""
                 />
               </div>
               <div className="d-flex flex-column">
@@ -97,7 +95,7 @@ const MainPage = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </section>
       </section>
@@ -110,14 +108,14 @@ const MainPage = () => {
           className="d-flex justify-content-between align-items-center container-fluid">
           <h1 className="page-title">New item</h1>
           <div className="new-rightpart">
-            <p className="sale-viewall m-0 p-0">View All</p>
+            <Link to={"/productdetails"} className="sale-viewall m-0 p-0">View All</Link>
           </div>
         </div>
 
         <section className="pt-3 product-part d-flex pe-2 ps-2">
 
           <div>
-            <Link to={"/productdetails"} className="pb-4 mx-2">
+            <Link to={"/productdetails"} className="pb-4 mx-2 nav-link">
               <div>
                 <img
                   src="https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"

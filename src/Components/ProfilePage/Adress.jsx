@@ -1,20 +1,17 @@
 import React from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import Header from "../Header/Header";
 
 const Adress = () => {
 
 
   return (
-    <div className="shipping-address container-fluid">
-      <div className="shipping fixed-top px-2">
-        <ArrowBackIosNewIcon />
-        <h2 className="fw-bold">Shipping Address</h2>
-        <p></p>
-      </div>
+    <div className="shipping-address">
+      <Header name="Shipping Address" />
       <div className="adress-part">
         <div className="mb-4">
 
-          <div className="product">
+          <div className="product content-part">
             <div>
               <h5>
                 Address

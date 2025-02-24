@@ -1,0 +1,16 @@
+.header-section {
+     display: flex;
+     justify-content: space-between;
+     padding: 13px 5px;
+     box-shadow: 0px 4px 24px 0px #00000014;
+     position: fixed;
+     background-color: #ffffff;
+     width: 100%;
+     top: 0;
+     /* border-bottom-left-radius: 15px; */
+     /* border-bottom-right-radius: 15px; */
+}
+
+.content-part {
+     margin-top: 18%;
+}

@@ -4,18 +4,13 @@ import "../ProfilePage/ProfilePage.css";
 import Footer from "../Footerpart/Footer";
 import { Link } from "react-router-dom";
 import "../ProfilePage/ProfilePage.css";
+import Header from "../Header/Header";
 
 const MyOrder = () => {
   return (
-    <section className="container-fluid order-page">
-      <section className="top-part">
-        <div className="pt-3 pb-2 d-flex justify-content-between">
-          <ArrowBackIosNewIcon />
-        </div>
-        <h1 className="fw-bold mt-3 mb-4">My Orders</h1>
-      </section>
-
-      <section className="order-status">
+    <>
+      <Header name="My Orders" />
+      <section className="order-status content-part">
         <div className="mt-4 order-details">
           <div className="d-flex justify-content-between ps-4 pe-4 pt-3 pb-2">
             <span>Order: </span>
@@ -41,7 +36,7 @@ const MyOrder = () => {
         </div>
       </section>
       <Footer />
-    </section>
+    </>
   );
 };
 

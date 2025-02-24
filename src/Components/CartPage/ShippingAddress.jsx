@@ -3,21 +3,15 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Link } from "react-router-dom";
 import TextField from "@mui/material/TextField";
 import "../CartPage/CartPage.css";
+import Header from "../Header/Header";
 
 const ShippingAddress = () => {
 
   return (
     <section className="shipping-address-page">
-      <section className="top-part">
-        <div className="py-3 d-flex justify-content-between align-items-center container">
-          <Link className="nav-link">
-            <ArrowBackIosNewIcon />
-          </Link>
-          <span className="fw-bold mx-auto">Shipping Addresses</span>
-        </div>
-      </section>
+      <Header name="Shipping Addresses" />
 
-      <section className="container">
+      <section className="content-part">
         <div className="details-part">
           <div className="product">
             <div className="row mb-4 p-4">

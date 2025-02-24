@@ -4,20 +4,14 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import "../NewPassword/NewPassword.css";
 import Form from "react-bootstrap/Form";
 import TextField from "@mui/material/TextField";
+import Header from "../Header/Header";
 
 const NewPassword = () => {
 
   return (
     <section className="newpassword-page">
-      <section className="container">
-        <section className="top-part">
-          <div className="pt-3">
-            <Link to="/signup">
-              <ArrowBackIosNewIcon className="text-dark" />
-            </Link>
-            <h1 className="mt-3 mb-5 fw-bold">Change Password</h1>
-          </div>
-        </section>
+      <Header name="Change Password" />
+      <section className="content-part">
 
         <section>
           <Form>

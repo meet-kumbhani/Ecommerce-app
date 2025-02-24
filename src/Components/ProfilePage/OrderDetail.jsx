@@ -2,20 +2,13 @@ import React from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import "../ProfilePage/ProfilePage.css";
 import Footer from "../Footerpart/Footer";
+import Header from "../Header/Header";
 
 const OrderDetail = () => {
   return (
     <div className="order-details-page">
-      <section className="container">
-        <section className="top-part fixed-top container-fluid">
-          <div className="pt-3 pb-2 d-flex justify-content-between">
-            <ArrowBackIosNewIcon />
-
-            <h5 className="fw-bold">Order Details</h5>
-            <p></p>
-          </div>
-        </section>
-
+      <Header name="Order Details" />
+      <section className="content-part">
         <section className="order-status">
           <div>
             <div className="d-flex justify-content-between ps-2 pe-2 pt-3 pb-2">

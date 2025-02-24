@@ -4,24 +4,15 @@ import SearchIcon from "@mui/icons-material/Search";
 import "../CategoryPage/CategoryPage.css";
 import { Link } from "react-router-dom";
 import Footer from "../Footerpart/Footer";
+import Header from "../Header/Header";
 
 const CategoryList = () => {
 
   return (
-    <section className="container">
-      <section className="top-part">
-        <div className="pt-3 pb-2 d-flex justify-content-between">
-          <ArrowBackIosNewIcon />
+    <>
+      <Header name="Categories" />
 
-          <h5 className="fw-bold">Categories</h5>
-          <div>
-            <SearchIcon
-              className="fs-1" />
-          </div>
-        </div>
-      </section>
-
-      <section className="row">
+      <section className="content-part">
         <div className="categorylist">
           <button className="w-100 viewall-btn">
             VIEW ALL ITEMS
@@ -37,7 +28,7 @@ const CategoryList = () => {
         </div>
       </section>
       <Footer />
-    </section>
+    </>
   );
 };
 

@@ -2,20 +2,14 @@ import React from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import { Link } from "react-router-dom";
 import "../ProfilePage/ProfilePage.css";
+import Header from "../Header/Header";
 
 const Checkout = () => {
 
   return (
     <>
       <section className="checkout-page">
-        <section className="top-part">
-          <div className="py-3 d-flex justify-content-between align-items-center container">
-            <Link className="nav-link">
-              <ArrowBackIosNewIcon />
-            </Link>
-            <span className="fw-bold mx-auto">Checkout</span>
-          </div>
-        </section>
+        <Header name="Checkout" />
 
         <section className="container">
           <div className="details-part">

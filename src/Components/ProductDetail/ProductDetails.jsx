@@ -1,32 +1,24 @@
 import React from "react";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import Rating from "@mui/material/Rating";
 import "../ProductDetail/ProductDetail.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link } from "react-router-dom";
+import "../../App.css"
 import Fab from "@mui/material/Fab";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import Header from "../Header/Header";
 const ProductDetails = () => {
 
   return (
     <section className="productdetails-part">
       {/* Top Part */}
 
-      <section className="top-part container-fluid">
-        <div className="pt-3 pb-3 d-flex justify-content-between">
-          <ArrowBackIosNewIcon />
-
-
-          <span className="fw-bold">Details Screen</span>
-          {/* <ShareIcon /> */}
-          <p></p>
-        </div>
-      </section>
+      <Header name="Product Details" />
 
       {/* Product Details */}
 
-      <section className="productdetails">
+      <section className="productdetails content-part">
 
         <div>
           <div className="image-part">

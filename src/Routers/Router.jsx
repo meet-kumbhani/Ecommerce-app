@@ -80,7 +80,7 @@ const Router = () => {
             element={<MyOrder />}
           ></Route>
           <Route
-            path="/orderdetails/:id"
+            path="/orderdetails"
             element={<OrderDetail />}
           ></Route>
           <Route

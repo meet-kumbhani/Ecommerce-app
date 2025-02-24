@@ -1,6 +1,6 @@
 @font-face {
   font-family: Metroplis;
-  src: url(/fonts/metropolis/Metropolis-Regular.otf);
+  src: url(../../../public/fonts/metropolis/Metropolis-Regular.otf);
 }
 
 :root {
@@ -13,7 +13,7 @@ body {
 }
 
 .main-page .image-content-part {
-  background-image: url(/images/Banner.png);
+  background-image: url(../../../public/images/Banner.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -115,4 +115,17 @@ body {
 
 .new-collection-part .new-viewall:hover {
   color: #ff7f00;
+}
+
+.product-image {
+  width: 130px;
+  height: 160px;
+  border-radius: 10px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
