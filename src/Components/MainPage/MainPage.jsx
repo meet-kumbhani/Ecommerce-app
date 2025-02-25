@@ -27,21 +27,12 @@ const MainPage = () => {
       {/* Mix Collections */}
 
       <section className="all-collection">
-        <div className="college-items mt-3">
+        <div className="college-items">
           <div>
-            <img src={'https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true'} alt="" width="100%" />
+            <img src={'https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true'} alt="" width="100%" height="400px" style={{ objectFit: "cover" }} />
           </div>
           <div className="row">
             <div className="col col-sm-6 d-flex flex-column">
-              <div className="container d-flex justify-content-start mt-auto">
-
-                <div className="">
-                  <h1 className="summersale-text">
-                    Summer <br />
-                    Sale
-                  </h1>
-                </div>
-              </div>
               <div className="mt-auto">
                 <div>
                   <img src={"https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"} alt="" width="100%" />
@@ -60,17 +51,17 @@ const MainPage = () => {
       {/* Sale Collection */}
 
       <section className="sale-part mt-3">
-        <div className="d-flex justify-content-between align-items-center container-fluid">
+        <div className="d-flex justify-content-between align-items-center px-2">
           <p className="page-title">Sale</p>
           <div className="new-rightpart">
-            <Link to={"/productdetails"} className="sale-viewall m-0 p-0">View All</Link>
+            <Link to={"/subcategory"} className="sale-viewall m-0 p-0">View All</Link>
           </div>
         </div>
 
 
         <section className="pt-3 product-part d-flex pe-2 ps-2">
           <div>
-            <Link to={"/productdetails"} className="pb-4 mx-2 nav-link">
+            <Link to={"/subcategory"} className="nav-link">
               <div className="product-image">
                 <img
                   src="https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"
@@ -84,12 +75,12 @@ const MainPage = () => {
                   defaultValue={1}
                   size="small"
                 />
-                <span>Nike</span>
-                <span className="fs-3 fw-bold">
+                <h6 className="mb-0 fw-bold">Nike</h6>
+                <h6 className="mb-0">
                   Sweat shirt
-                </span>
+                </h6>
                 <div className="d-flex">
-                  <div className=" strike">11₹</div>
+                  <div className="strike">11₹</div>
                   <div className="mx-2 price">
                     1₹
                   </div>
@@ -102,26 +93,24 @@ const MainPage = () => {
 
       {/* New Collection */}
 
-      <section className="new-collection-part">
+      <section className="new-collection-part mt-3">
 
         <div
-          className="d-flex justify-content-between align-items-center container-fluid">
+          className="d-flex justify-content-between align-items-center px-2">
           <h1 className="page-title">New item</h1>
           <div className="new-rightpart">
-            <Link to={"/productdetails"} className="sale-viewall m-0 p-0">View All</Link>
+            <Link to={"/subcategory"} className="sale-viewall m-0 p-0">View All</Link>
           </div>
         </div>
 
-        <section className="pt-3 product-part d-flex pe-2 ps-2">
+        <section className="pt-3 product-part d-flex px-2">
 
           <div>
-            <Link to={"/productdetails"} className="pb-4 mx-2 nav-link">
-              <div>
+            <Link to={"/subcategory"} className="nav-link">
+              <div className="product-image">
                 <img
                   src="https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"
-                  className="product-image2"
-                  height={"160px"}
-                  width={"130px"}
+                  className=""
                 />
               </div>
               <div className="d-flex flex-column">
@@ -131,10 +120,10 @@ const MainPage = () => {
                   defaultValue={1}
                   size="small"
                 />
-                <span>Puma</span>
-                <span className="fs-3 fw-bold">
-                  Tshirt
-                </span>
+                <h6 className="mb-0 fw-bold">Nike</h6>
+                <h6 className="mb-0">
+                  Sweat shirt
+                </h6>
                 <div className="d-flex">
                   <div className="price">11₹</div>
                 </div>

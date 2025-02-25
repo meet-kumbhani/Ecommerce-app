@@ -27,7 +27,7 @@ const CategoryPage = () => {
               to={`/subcategory`}
               className="nav-link"
             >
-              <div className="bg-white d-flex justify-content-between mt-2 mx-2 categories-card">
+              <div className="bg-white d-flex justify-content-between mt-2 categories-card">
                 <div className="w-50">
                   <div className="d-flex justify-content-center align-items-center h-100 ms-auto fw-bold">
                     <p className="text-center mb-0">Shoes</p>

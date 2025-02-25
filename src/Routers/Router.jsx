@@ -5,10 +5,8 @@ import Setting from "../Components/ProfilePage/Setting";
 import OrderDetail from "../Components/ProfilePage/OrderDetail";
 import MyOrder from "../Components/ProfilePage/MyOrder";
 import MyProfile from "../Components/ProfilePage/MyProfile";
-import FavouriteGrid from "../Components/FavouritePage/FavouriteGrid";
 import FavouritePageList from "../Components/FavouritePage/FavouritePageList";
 import CatalogPage from "../Components/CatalogPage/CatalogPage";
-import CatalogPage2 from "../Components/CatalogPage/CatelogPage2";
 import CartPage from "../Components/CartPage/CartPage";
 import MainPage from "../Components/MainPage/MainPage";
 import CategoryPage from "../Components/CategoryPage/CategoryPage";
@@ -47,20 +45,12 @@ const Router = () => {
             element={<CatalogPage />}
           ></Route>
           <Route
-            path="/catalog2"
-            element={<CatalogPage2 />}
-          ></Route>
-          <Route
             path="/productdetails"
             element={<ProductDetails />}
           ></Route>
           <Route
             path="/favourite"
             element={<FavouritePageList />}
-          ></Route>
-          <Route
-            path="/favouritegrid"
-            element={<FavouriteGrid />}
           ></Route>
           <Route
             path="/cart"
