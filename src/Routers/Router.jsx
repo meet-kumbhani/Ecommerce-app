@@ -41,7 +41,7 @@ const Router = () => {
             element={<CategoryList />}
           ></Route>
           <Route
-            path="/catalog"
+            path="/catalog/:id"
             element={<CatalogPage />}
           ></Route>
           <Route

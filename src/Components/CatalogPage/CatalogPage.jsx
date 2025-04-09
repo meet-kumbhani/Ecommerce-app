@@ -1,21 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import FilterListIcon from "@mui/icons-material/FilterList";
 import SwapVertIcon from "@mui/icons-material/SwapVert";
 import "../CatalogPage/CatalogPage.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Footer from "../Footerpart/Footer";
 import Slider from "@mui/material/Slider";
 import Header from "../Header/Header";
 import { Fab, Rating } from "@mui/material";
+import { GlobalContext } from "../../Context/GlobalContext";
 
 const CatalogPage = () => {
+  const { products, categories } = useContext(GlobalContext)
+  const { id } = useParams();
+  const flatProducts = products.flat();
+
+  const category = categories.flat();
+
+  const categoryName = category.find((p) => p.id == id).name;
+
+  const filteredProducts = flatProducts.filter(p => p.category_id == id);
 
   return (
     <>
-      <Header name="Shoes" />
+      <Header name={categoryName} />
 
       <div className="content-part">
 
@@ -46,68 +56,58 @@ const CatalogPage = () => {
 
           <section className="catalog-items">
 
-            {/* <Items
-              image={"https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/z/i/s/-original-imaghhfypynjhd6z.jpeg?q=70&crop=true"}
-              rating={1}
-              price={11}
-              type={"Shoes"}
-              brand={"Nike"}
-              size={[12]}
-              color={["red"]}
-              id={1}
-              productId={2}
-              quantity={2}
-            /> */}
-
-            <div>
-              <Link to={`/productdetails`} className="nav-link">
-                <div className="product">
-                  <div className="row mb-4" style={{ position: "relative" }}>
-                    <div className="col-3">
-                      <img
-                        src={"https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/r/d/y/xxl-21188170-mast-harbour-original-imagshmu6g4ghz5k.jpeg?q=70&crop=false"}
-                        className="product-image"
-                        height={"120px"}
-                        width={"100px"}
-                      />
-                    </div>
-                    <div className="col-9 ps-5">
-                      <div className="d-flex flex-column">
-                        <span className="mt-2 fs-3 fw-bold">Adidas</span>
-                        <span>Shoes</span>
-                        <Rating
-                          name="size-small"
-                          className="mt-1 mb-1"
-                          defaultValue={5}
-                          size="small"
-                          readOnly
+            {filteredProducts.map((product) => (
+              <div key={product.id}>
+                <Link to={`/productdetails`} className="nav-link">
+                  <div className="product">
+                    <div className="d-flex align-items-start gap-2 mb-4" style={{ position: "relative" }}>
+                      <div>
+                        <img
+                          src={"https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/r/d/y/xxl-21188170-mast-harbour-original-imagshmu6g4ghz5k.jpeg?q=70&crop=false"}
+                          className="product-image"
+                          height={"120px"}
+                          width={"100px"}
                         />
-                        <span className="fs-6 fw-bold">$200</span>
                       </div>
+                      <div>
+                        <div className="d-flex flex-column ms-1">
+                          <span className="mt-2 fs-5 fw-bold">{product.brand}</span>
+                          <span>{product.name}</span>
+                          <Rating
+                            name="size-small"
+                            className="mt-1 mb-1"
+                            defaultValue={5}
+                            size="small"
+                            readOnly
+                          />
+                          <span className="fs-6 fw-bold">${product.price}</span>
+                        </div>
+                      </div>
+                      <Fab
+                        style={{
+                          position: "absolute",
+                          bottom: "-20px",
+                          right: "14px",
+                          zIndex: "1",
+                          color: "orange",
+                          backgroundColor: "white",
+                          height: "45px",
+                          width: "45px",
+                        }}
+                        aria-label="like"
+                        className="favoutite-icon"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target={`#size_`}
+                        aria-controls="offcanvasBottom"
+                      >
+                        <FavoriteBorderOutlinedIcon />
+                      </Fab>
                     </div>
-                    <Fab
-                      style={{
-                        position: "absolute",
-                        bottom: "-20px",
-                        right: "14px",
-                        zIndex: "1",
-                        color: "orange",
-                        backgroundColor: "white",
-                        height: "45px",
-                        width: "45px",
-                      }}
-                      aria-label="like"
-                      className="favoutite-icon"
-                      data-bs-toggle="offcanvas"
-                      data-bs-target={`#size_`}
-                      aria-controls="offcanvasBottom"
-                    >
-                      <FavoriteBorderOutlinedIcon />
-                    </Fab>
                   </div>
-                </div>
-              </Link>
-
+                </Link>
+              </div>
+            ))}
+            <div>
               {/* Size Offcanvas */}
 
               <div

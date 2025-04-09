@@ -6,8 +6,8 @@ const Header = (props) => {
      const navigate = useNavigate();
      return (
           <>
-               <section className="top-part">
-                    <div className="header-section">
+               <section className="top-part fixed-top">
+                    <div className="header-section fixed-top">
                          <ArrowBackIosNewIcon className="fs-5" onClick={() => navigate(-1)} />
                          <p className="fw-bold mb-0">{props.name}</p>
                          <p></p>
